@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-commerce</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-dark">
+    <div class="container mt-5">
+        <div class="row">
+            
+            <div class="col-md-4 d-inline">
+                <div class="card">
+                    <div class="card-body">
+                        <form onsubmit="event.preventDefault(), updateProduct()">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Producto</label>
+                                <input type="text" class="form-control" id="name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="price" class="form-label">Precio</label>
+                                <input type="text" class="form-control" id="price">
+                            </div>
+                            <div class="mb-3">
+                                <label for="price" class="form-label">Imagen URL:</label>
+                                <input type="url" class="form-control" id="image">
+                            </div>
+                        </form>
+                            <button type="submit" onclick="createProduct()" class="btn btn-primary">Crear</button>
+                            <button type="submit" onclick="updateProduct()" class="btn btn-warning">Actualizar</button>
+                    </div>
+                </div>
+            </div>
+        <div class="row" id="products-container">
+        <!-- Aquí van los productos -->
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./assets/js/js.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/50ead72691.js" crossorigin="anonymous"></script>
+</body>
+</html>
